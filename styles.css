@@ -11,8 +11,8 @@ html {
 
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    background: #060506;
-    color: #bfbfc1;
+    background: #020202;
+    color: #9a9a9a;
     line-height: 1.6;
     overflow-x: hidden;
 }
@@ -29,9 +29,9 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    background: rgba(6, 5, 6, 0.95);
+    background: rgba(2, 2, 2, 0.95);
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid #2d2c2d;
+    border-bottom: 1px solid #1a1a1a;
     z-index: 1000;
     padding: 15px 0;
 }
@@ -69,7 +69,7 @@ body {
 }
 
 .nav-link {
-    color: #bfbfc1;
+    color: #9a9a9a;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
@@ -120,7 +120,7 @@ body {
     align-items: center;
     justify-content: center;
     padding: 120px 20px 60px;
-    background: linear-gradient(135deg, #060506 0%, #2d2c2d 100%);
+    background: linear-gradient(135deg, #020202 0%, #1a1a1a 100%);
 }
 
 .hero-container {
@@ -167,19 +167,19 @@ body {
 
 .btn-secondary {
     background: transparent;
-    color: #bfbfc1;
-    border-color: #2d2c2d;
+    color: #9a9a9a;
+    border-color: #1a1a1a;
 }
 
 .btn-secondary:hover {
-    background: #2d2c2d;
+    background: #1a1a1a;
     border-color: #6b967e;
     color: #6b967e;
 }
 
 .hero-description {
     font-size: 18px;
-    color: #707586;
+    color: #666;
     max-width: 600px;
     margin: 0 auto;
 }
@@ -187,7 +187,7 @@ body {
 /* Download Section */
 .download-section {
     padding: 100px 0;
-    background: #0a0a0a;
+    background: #050505;
 }
 
 .section-title {
@@ -200,27 +200,28 @@ body {
 
 .section-subtitle {
     font-size: 20px;
-    color: #707586;
+    color: #666;
     text-align: center;
     margin-bottom: 60px;
 }
 
 .download-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    display: flex;
+    justify-content: center;
     margin-bottom: 60px;
 }
 
 .download-card {
-    background: #1a1a1a;
-    border: 1px solid #2d2c2d;
+    background: #0d0d0d;
+    border: 1px solid #1a1a1a;
     border-radius: 16px;
     padding: 30px;
     text-align: center;
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    max-width: 400px;
+    width: 100%;
 }
 
 .download-card::before {
@@ -246,7 +247,7 @@ body {
 
 .download-card.primary {
     border-color: #6b967e;
-    background: linear-gradient(135deg, #1a1a1a, #2d2c2d);
+    background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
 }
 
 .download-header {
@@ -278,13 +279,13 @@ body {
 }
 
 .feature {
-    color: #707586;
+    color: #666;
     font-size: 14px;
     text-align: left;
 }
 
 .download-size {
-    color: #5b5759;
+    color: #444;
     font-size: 14px;
     margin-bottom: 25px;
 }
@@ -328,14 +329,14 @@ body {
 }
 
 .stat-label {
-    color: #707586;
+    color: #666;
     font-size: 14px;
 }
 
 /* FAQ Section */
 .faq-section {
     padding: 100px 0;
-    background: #060506;
+    background: #020202;
 }
 
 .faq-container {
@@ -344,7 +345,7 @@ body {
 }
 
 .faq-item {
-    border-bottom: 1px solid #2d2c2d;
+    border-bottom: 1px solid #1a1a1a;
     margin-bottom: 20px;
 }
 
@@ -390,14 +391,14 @@ body {
 
 .faq-answer p {
     padding-bottom: 25px;
-    color: #707586;
+    color: #666;
     line-height: 1.8;
 }
 
 /* Footer */
 .footer {
-    background: #0a0a0a;
-    border-top: 1px solid #2d2c2d;
+    background: #050505;
+    border-top: 1px solid #1a1a1a;
     padding: 40px 0;
 }
 
@@ -422,7 +423,7 @@ body {
 }
 
 .footer-tagline {
-    color: #707586;
+    color: #666;
     font-style: italic;
 }
 
@@ -432,7 +433,7 @@ body {
 }
 
 .footer-links a {
-    color: #707586;
+    color: #666;
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -452,9 +453,9 @@ body {
     justify-content: center;
     width: 40px;
     height: 40px;
-    background: #2d2c2d;
+    background: #1a1a1a;
     border-radius: 8px;
-    color: #707586;
+    color: #666;
     transition: all 0.3s ease;
 }
 
@@ -512,7 +513,7 @@ body {
 }
 
 .modal-content {
-    background: linear-gradient(135deg, #1a1a1a, #2d2c2d);
+    background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
     margin: 5% auto;
     padding: 0;
     border: 1px solid #6b967e;
@@ -559,7 +560,7 @@ body {
 }
 
 .modal-body p {
-    color: #bfbfc1;
+    color: #9a9a9a;
     line-height: 1.6;
     margin-bottom: 25px;
 }
@@ -594,7 +595,7 @@ body {
 }
 
 .step-text {
-    color: #bfbfc1;
+    color: #9a9a9a;
     font-weight: 500;
 }
 
@@ -604,7 +605,7 @@ body {
     border-radius: 8px;
     padding: 15px;
     margin: 20px 0;
-    color: #bfbfc1;
+    color: #9a9a9a;
     line-height: 1.6;
 }
 
@@ -626,14 +627,14 @@ body {
 }
 
 .modal-checkbox label {
-    color: #bfbfc1;
+    color: #9a9a9a;
     font-weight: 500;
     cursor: pointer;
 }
 
 .modal-footer {
     padding: 20px 30px;
-    border-top: 1px solid #2d2c2d;
+    border-top: 1px solid #1a1a1a;
     text-align: center;
 }
 
@@ -643,8 +644,8 @@ body {
 }
 
 .modal-footer .btn:disabled {
-    background: #2d2c2d;
-    color: #5b5759;
+    background: #1a1a1a;
+    color: #444;
     cursor: not-allowed;
     opacity: 0.6;
 }
@@ -680,7 +681,7 @@ body.modal-open .footer {
     height: auto;
     border-radius: 12px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-    border: 1px solid #2d2c2d;
+    border: 1px solid #1a1a1a;
 }
 
 /* Scrollbar Styling */
@@ -689,11 +690,11 @@ body.modal-open .footer {
 }
 
 ::-webkit-scrollbar-track {
-    background: #060506;
+    background: #020202;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #2d2c2d;
+    background: #1a1a1a;
     border-radius: 4px;
 }
 
