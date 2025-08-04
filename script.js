@@ -201,29 +201,26 @@ function trackDownload(platform) {
     localStorage.setItem('downloadStats', JSON.stringify(downloads));
 }
 
-// FAQ functionality
+// FAQ functionality - FIXED
 function initializeFAQ() {
     const faqItems = document.querySelectorAll('.faq-item');
 
     faqItems.forEach(item => {
         const question = item.querySelector('.faq-question');
-        question.addEventListener('click', () => toggleFAQ(question));
+        question.addEventListener('click', () => {
+            const isActive = item.classList.contains('active');
+
+            // Close all FAQ items
+            document.querySelectorAll('.faq-item').forEach(faqItem => {
+                faqItem.classList.remove('active');
+            });
+
+            // Open clicked item if it wasn't active
+            if (!isActive) {
+                item.classList.add('active');
+            }
+        });
     });
-}
-
-function toggleFAQ(element) {
-    const faqItem = element.closest('.faq-item');
-    const isActive = faqItem.classList.contains('active');
-
-    // Close all FAQ items
-    document.querySelectorAll('.faq-item').forEach(item => {
-        item.classList.remove('active');
-    });
-
-    // Open clicked item if it wasn't active
-    if (!isActive) {
-        faqItem.classList.add('active');
-    }
 }
 
 // Animation functionality
