@@ -1,10 +1,48 @@
 // DOM Ready
 document.addEventListener('DOMContentLoaded', function() {
+    initializeDisclaimerModal();
     initializeNavigation();
     initializeDownloadButtons();
     initializeFAQ();
     initializeAnimations();
 });
+
+// Disclaimer Modal functionality
+function initializeDisclaimerModal() {
+    const modal = document.getElementById('disclaimerModal');
+    const checkbox = document.getElementById('understood');
+    const continueBtn = document.getElementById('continueBtn');
+
+    // Add modal-open class to body
+    document.body.classList.add('modal-open');
+
+    // Enable/disable continue button based on checkbox
+    checkbox.addEventListener('change', function() {
+        continueBtn.disabled = !this.checked;
+        if (this.checked) {
+            continueBtn.classList.remove('disabled');
+        } else {
+            continueBtn.classList.add('disabled');
+        }
+    });
+
+    // Continue button click
+    continueBtn.addEventListener('click', function() {
+        if (checkbox.checked) {
+            modal.classList.add('hidden');
+            document.body.classList.remove('modal-open');
+
+            // Store that user has seen disclaimer
+            localStorage.setItem('xenoDisclaimerSeen', 'true');
+        }
+    });
+
+    // Check if user has already seen disclaimer
+    if (localStorage.getItem('xenoDisclaimerSeen') === 'true') {
+        modal.classList.add('hidden');
+        document.body.classList.remove('modal-open');
+    }
+}
 
 // Navigation functionality
 function initializeNavigation() {
@@ -90,16 +128,8 @@ function initializeDownloadButtons() {
 function downloadFile(platform) {
     const downloads = {
         windows: {
-            url: 'https://github.com/your-repo/releases/download/v3.2.1/DevToolsPro-Windows-v3.2.1.exe',
-            filename: 'DevToolsPro-Windows-v3.2.1.exe'
-        },
-        mac: {
-            url: 'https://github.com/your-repo/releases/download/v3.2.1/DevToolsPro-macOS-v3.2.1.dmg',
-            filename: 'DevToolsPro-macOS-v3.2.1.dmg'
-        },
-        linux: {
-            url: 'https://github.com/your-repo/releases/download/v3.2.1/DevToolsPro-Linux-v3.2.1.AppImage',
-            filename: 'DevToolsPro-Linux-v3.2.1.AppImage'
+            url: 'https://github.com/xeno-executor/releases/download/v3.2.0/Xeno-v3.2.0.exe',
+            filename: 'Xeno-v3.2.0.exe'
         }
     };
 
