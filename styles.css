@@ -205,9 +205,34 @@ body {
     margin-bottom: 60px;
 }
 
+/* Patcher Notice */
+.patcher-notice {
+    background: linear-gradient(135deg, rgba(134, 81, 88, 0.2), rgba(134, 81, 88, 0.1));
+    border: 1px solid #865158;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.patcher-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.patcher-description {
+    font-size: 16px;
+    color: #9a9a9a;
+    margin: 0;
+}
+
 .download-grid {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    justify-items: center;
     margin-bottom: 60px;
 }
 
@@ -248,6 +273,24 @@ body {
 .download-card.primary {
     border-color: #6b967e;
     background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+}
+
+.download-card.patcher {
+    border-color: #865158;
+    background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+}
+
+.download-card.patcher::before {
+    background: linear-gradient(90deg, transparent, #865158, transparent);
+}
+
+.download-card.patcher:hover {
+    border-color: #865158;
+    box-shadow: 0 20px 40px rgba(134, 81, 88, 0.1);
+}
+
+.download-card.patcher .version {
+    background: #865158;
 }
 
 .download-header {
@@ -482,6 +525,16 @@ body {
 
     .download-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .patcher-notice {
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+
+    .patcher-title {
+        font-size: 20px;
     }
 
     .download-stats {
