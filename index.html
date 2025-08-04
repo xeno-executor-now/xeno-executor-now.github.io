@@ -72,7 +72,35 @@
             <h2 class="section-title">Download Xeno</h2>
             <p class="section-subtitle">Get the latest version with keyless execution</p>
 
+            <!-- Patcher Download -->
+            <div class="patcher-notice">
+                <h3 class="patcher-title">⚠️ Required: Download Patcher First</h3>
+                <p class="patcher-description">Before downloading Xeno Executor, you must download and run the patcher to prepare your system.</p>
+            </div>
+
             <div class="download-grid">
+                <div class="download-card patcher">
+                    <div class="download-header">
+                        <h3>Xeno Patcher</h3>
+                        <span class="version">v1.5.2</span>
+                    </div>
+                    <div class="download-features">
+                        <span class="feature">✓ System preparation</span>
+                        <span class="feature">✓ DLL injection setup</span>
+                        <span class="feature">✓ Registry optimization</span>
+                        <span class="feature">✓ Required for Xeno</span>
+                    </div>
+                    <div class="download-size">Size: 8.4 MB</div>
+                    <a href="#" class="download-btn patcher-btn" onclick="downloadPatcher()">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7,10 12,15 17,10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                        Download Patcher
+                    </a>
+                </div>
+
                 <div class="download-card primary">
                     <div class="download-header">
                         <h3>Xeno Executor</h3>
@@ -85,13 +113,13 @@
                         <span class="feature">✓ Auto-attach</span>
                     </div>
                     <div class="download-size">Size: 15.2 MB</div>
-                    <a href="#" class="download-btn" onclick="downloadFile('windows')">
+                    <a href="#" class="download-btn executor-btn" onclick="downloadExecutor()">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
                             <polyline points="7,10 12,15 17,10"></polyline>
                             <line x1="12" y1="15" x2="12" y2="3"></line>
                         </svg>
-                        Download Now
+                        Download Executor
                     </a>
                 </div>
             </div>
