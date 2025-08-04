@@ -132,206 +132,7 @@ body {
     text-align: center;
 }
 
-/* Editor Preview */
-.editor-preview {
-    background: #1a1a1a;
-    border-radius: 12px;
-    margin-bottom: 40px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-    border: 1px solid #2d2c2d;
-    overflow: hidden;
-}
 
-.editor-header {
-    background: #2d2c2d;
-    padding: 12px 16px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid #3a3a3a;
-}
-
-.window-controls {
-    display: flex;
-    gap: 8px;
-}
-
-.control {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-}
-
-.control.close {
-    background: #ff5f57;
-}
-
-.control.minimize {
-    background: #ffbd2e;
-}
-
-.control.maximize {
-    background: #28ca42;
-}
-
-.editor-title {
-    color: #bfbfc1;
-    font-size: 14px;
-    font-weight: 500;
-}
-
-.active-clients {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.status-text {
-    color: #6b967e;
-    font-size: 14px;
-}
-
-.client-indicators {
-    display: flex;
-    gap: 4px;
-}
-
-.client-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: #5b5759;
-}
-
-.client-dot.active {
-    background: #6b967e;
-    animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.5; }
-}
-
-.editor-body {
-    display: flex;
-    height: 300px;
-}
-
-.sidebar {
-    width: 200px;
-    background: #252525;
-    border-right: 1px solid #3a3a3a;
-    padding: 16px;
-}
-
-.sidebar-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 16px;
-}
-
-.sidebar-header h4 {
-    color: #bfbfc1;
-    font-size: 14px;
-    font-weight: 600;
-}
-
-.file-tree {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.file-item {
-    color: #707586;
-    font-size: 13px;
-    padding: 4px 8px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background 0.2s ease;
-}
-
-.file-item:hover {
-    background: #3a3a3a;
-    color: #bfbfc1;
-}
-
-.code-area {
-    flex: 1;
-    display: flex;
-    background: #1a1a1a;
-}
-
-.line-numbers {
-    background: #252525;
-    padding: 16px 12px;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    border-right: 1px solid #3a3a3a;
-    font-family: 'Monaco', 'Menlo', monospace;
-    font-size: 13px;
-    color: #5b5759;
-    min-width: 50px;
-}
-
-.code-content {
-    padding: 16px;
-    flex: 1;
-    font-family: 'Monaco', 'Menlo', monospace;
-    font-size: 13px;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
-.code-line {
-    color: #bfbfc1;
-}
-
-.keyword {
-    color: #865158;
-}
-
-.variable {
-    color: #6b967e;
-}
-
-.string {
-    color: #707586;
-}
-
-.comment {
-    color: #5b5759;
-    font-style: italic;
-}
-
-.method {
-    color: #323747;
-}
-
-.class {
-    color: #2c554c;
-}
-
-.boolean {
-    color: #865158;
-}
-
-.editor-footer {
-    background: #2d2c2d;
-    border-top: 1px solid #3a3a3a;
-    padding: 8px 16px;
-}
-
-.status-bar {
-    display: flex;
-    gap: 20px;
-    font-size: 12px;
-    color: #707586;
-}
 
 /* Hero Actions */
 .hero-actions {
@@ -695,6 +496,191 @@ body {
     .section-title {
         font-size: 36px;
     }
+}
+
+/* Disclaimer Modal */
+.modal {
+    display: block;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(10px);
+}
+
+.modal-content {
+    background: linear-gradient(135deg, #1a1a1a, #2d2c2d);
+    margin: 5% auto;
+    padding: 0;
+    border: 1px solid #6b967e;
+    border-radius: 16px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+    animation: modalSlideIn 0.4s ease;
+    overflow: hidden;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-header {
+    background: #6b967e;
+    padding: 20px;
+    text-align: center;
+}
+
+.modal-header h2 {
+    color: white;
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.modal-body {
+    padding: 30px;
+}
+
+.modal-body h3 {
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.modal-body p {
+    color: #bfbfc1;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.disclaimer-steps {
+    margin: 25px 0;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    padding: 12px;
+    background: rgba(107, 150, 126, 0.1);
+    border-radius: 8px;
+    border-left: 3px solid #6b967e;
+}
+
+.step-number {
+    background: #6b967e;
+    color: white;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+.step-text {
+    color: #bfbfc1;
+    font-weight: 500;
+}
+
+.warning-box {
+    background: rgba(134, 81, 88, 0.2);
+    border: 1px solid #865158;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 20px 0;
+    color: #bfbfc1;
+    line-height: 1.6;
+}
+
+.warning-box strong {
+    color: #fff;
+}
+
+.modal-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 25px 0;
+}
+
+.modal-checkbox input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #6b967e;
+}
+
+.modal-checkbox label {
+    color: #bfbfc1;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.modal-footer {
+    padding: 20px 30px;
+    border-top: 1px solid #2d2c2d;
+    text-align: center;
+}
+
+.modal-footer .btn {
+    width: 100%;
+    justify-content: center;
+}
+
+.modal-footer .btn:disabled {
+    background: #2d2c2d;
+    color: #5b5759;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.modal-footer .btn:disabled:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+/* Hide modal when dismissed */
+.modal.hidden {
+    display: none;
+}
+
+/* Blur main content when modal is open */
+body.modal-open .navbar,
+body.modal-open .hero,
+body.modal-open .download-section,
+body.modal-open .faq-section,
+body.modal-open .footer {
+    filter: blur(3px);
+    pointer-events: none;
+}
+
+/* Editor Preview (simplified) */
+.executor-preview {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.executor-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    border: 1px solid #2d2c2d;
 }
 
 /* Scrollbar Styling */
