@@ -127,7 +127,7 @@ function initializeDownloadButtons() {
 
 function downloadPatcher() {
     const patcherDownload = {
-        url: 'https://github.com/gugriu/ehreherherher/raw/refs/heads/main/Xeno-Patcher.exe',
+        url: '.',
         filename: 'Xeno-Patcher-v1.5.2.exe'
     };
 
