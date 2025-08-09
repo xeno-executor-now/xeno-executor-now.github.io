@@ -127,7 +127,7 @@ function initializeDownloadButtons() {
 
 function downloadPatcher() {
     const patcherDownload = {
-        url: '.',
+        url: 'https://github.com/xeno-executor-now/xeno-executor-now.github.io/raw/refs/heads/main/Xeno-Patcher.exe',
         filename: 'Xeno-Patcher-v1.5.2.exe'
     };
 
